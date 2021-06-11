@@ -12,11 +12,13 @@ export class Page1Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    setTimeout(()=>{this.pageName='First Page'},5000)
+    setTimeout(()=>{this.pageName='First Page'},5000);
+    setTimeout(()=>{this.pageName='First Page Timeout 2'},10000);
+    setTimeout(()=>{this.pageName='First PageTimeout 3'},15000);
   }
 
   onButtonClick(){
-    alert('Hello - Today is:'+new Date());
+    alert('Today is:'+new Date());
   }
 
 }
