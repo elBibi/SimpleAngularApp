@@ -12,12 +12,10 @@ export class AppComponent implements OnInit {
 
   @ViewChild('footer', {static: true})
   footerComponent!: FooterComponent;
-
   @ViewChild('page2', {static: true})
   page2Component!: Page2Component;
 
   startTime!: string;
-
   currentPage = 1;
 
   updateLastAccessed() {
@@ -30,6 +28,7 @@ export class AppComponent implements OnInit {
   }
 
   incrementHitCounter(page: number) {
+    console.log("app.component.ts ->incrementHitCounter");
     this.currentPage = page;
     if (page === 2) {
       this.page2Component.incrementHitCounter();

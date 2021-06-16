@@ -14,6 +14,7 @@ export class Page2Component implements OnInit {
   }
 
   incrementHitCounter(){
+    console.log("page2.component.ts ->incrementHitCounter");
     this.hits++;
   }
 }

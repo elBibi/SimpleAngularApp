@@ -13,10 +13,10 @@ export class HeaderComponent implements OnInit {
   pageChangedEvent= new EventEmitter<number>();
 
   ngOnInit(): void { }
-  // @ts-ignore
-  onPageChange(page){
+
+  onPageChange(page: number){
     this.pageRequested=page;
-    console.log(this.pageRequested);
+    console.log("header.component.ts ->onPageChange :"+this.pageRequested);
     //fired event Modify page 2
     this.pageChangedEvent.emit(page);
   }
